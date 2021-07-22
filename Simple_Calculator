@@ -1,0 +1,53 @@
+program Calculator
+real :: X,Y,FUNCTION2
+integer:: FUNCTION1
+
+print*," This is a calculator."
+
+print*, "Select what you want to do."
+
+print*,"[1] Sum."
+print*,"[2] Extraction."
+print*,"[3] Multiplying."
+print*,"[4] Dividing."
+read*, FUNCTION1
+
+select case(FUNCTION1)
+
+case(1)
+print*, "You chose Sum."
+print*, "Please insert two number"
+read*, X,Y
+FUNCTION2 = X+Y
+print*, "Your Result=",FUNCTION2
+
+case(2)
+print*, "You chose Extraction."
+print*, "Please insert two number"
+read*, X,Y
+FUNCTION2 = X-Y
+print*, "Your Result=",FUNCTION2
+
+case(3)
+print*, "You chose Multiplying."
+print*, "Please insert two number"
+read*, X,Y
+FUNCTION2 = X*Y
+print*, "Your Result=",FUNCTION2
+
+case(4)
+print*, "You chose Dividing."
+print*, "Please insert two number"
+read*, X,Y
+
+if (Y== 0) then
+print*, " You cannot choose Y as 0."
+stop
+end if
+
+FUNCTION2 = X/Y
+print*, "Your Result=",FUNCTION2
+
+end select
+
+end program Calculator
