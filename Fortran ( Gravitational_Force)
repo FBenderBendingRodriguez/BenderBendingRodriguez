@@ -1,0 +1,21 @@
+program gravitational
+implicit NONE
+real(4) :: KC
+real(4) :: G = 6.67408e-11, m1, m2, d
+
+print*, "This program calculates the gravitational forces of two objects."
+
+print*, "Please insert the first mass."
+read*,m1
+
+print*, "Please insert the second mass."
+read*,m2
+
+print*, "Please insert the distance between the objects' center of mass."
+read*,d
+
+KC = (m1*m2*G)/d*2
+
+print*, "Force =",KC,"Newton"
+
+end program gravitational
