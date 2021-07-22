@@ -1,0 +1,14 @@
+program Energy
+implicit none 
+real:: m, c=3e+8, E
+
+print*," This program calculate the energy equivalence of a given mass in SI unit system."
+print*,"Please insert a mass="
+
+read*, m
+
+E = m*c**2
+
+print*, "Energy=",E,"Joule"
+
+end program
