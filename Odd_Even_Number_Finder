@@ -1,0 +1,14 @@
+program Odd_Even_Number_Finder
+implicit none
+integer :: X
+
+print*, "Insert a number."
+read*,X
+
+if (mod(X,2) == 0) then
+print*, "It is even."
+
+else
+print*, "It is odd."
+end if
+end program Odd_Even_Number_Finder
