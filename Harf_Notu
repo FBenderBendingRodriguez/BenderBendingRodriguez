@@ -1,0 +1,132 @@
+program not
+INTEGER:: ORTALAMA, BUT
+real:: KALAN, X, Y, Z, T
+
+
+print*, "BU PROGRAM ORTALAMA HESAPLAR"
+print*, "Birinci vize notunuzu giriniz"
+
+read*,X  
+if (X>=101) THEN
+print*, "Devrim hocanın sınavı değilse 100'den yüksek not olur mu ???"
+stop
+end if
+
+
+print*,"İkinci vize notunuzu giriniz"
+read*,Y
+if (Y>=101) THEN
+print*, "Devrim hocanın sınavı değilse 100'den yüksek not olur mu ???"
+stop
+end if
+
+KALAN = (40-((X+Y)*0.3))/0.4
+
+print*, "GECMEK ICIN FINALDEN ALMAN GEREKEN NOT=",KALAN
+
+
+
+
+
+print*,"Final notunuzu giriniz"
+read*,Z  
+
+
+
+if (Z>=101) THEN
+print*, "Devrim hocanın sınavı değilse 100'den yüksek not olur mu ???"
+stop
+end if
+
+Ortalama = ((X+Y)*0.3)+(Z*0.4)
+
+
+
+print*,"Ortalamanız=",ORTALAMA
+
+select case(ORTALAMA)
+
+CASE (0:39)
+print*,"FF"
+
+case (40:49)
+print*,"Harf notunuz DC"
+
+case (50:59)
+print*," Harf notunuz CC"
+
+case (60:69)
+print*,"Harf notunuz CB"
+
+case (70:79)
+print*," Harf notunuz BB"
+
+case (80:89)
+print*," Harf notunuz BA"
+
+case (90:100)
+print*, " Harf notunuz AA"
+
+case default
+print*,"Hatali deger girdiniz."
+print*,"Lütfen tekrar deneyiniz."
+
+
+end select
+
+if(ORTALAMA <= 39) THEN
+print*, "Büte girmeniz gerekiyor."
+print*,"Büt notunuzu giriniz"
+read*,T  
+if (T>=101) THEN
+print*, "Devrim hocanın sınavı değilse 100'den yüksek not olur mu ???"
+stop
+end if
+
+BUT = ((X+Y)*0.3)+(T*0.4)
+print*,"Ortalamanız=",BUT
+
+select case(BUT)
+
+CASE (0:39)
+print*,"FF"
+
+case (40:49)
+print*,"Harf notunuz DC"
+
+case (50:59)
+print*," Harf notunuz CC"
+
+case (60:69)
+print*,"Harf notunuz CB"
+
+case (70:79)
+print*," Harf notunuz BB"
+
+case (80:89)
+print*," Harf notunuz BA"
+
+case (90:100)
+print*, " Harf notunuz AA"
+
+case default
+print*,"Hatali deger girdiniz."
+print*,"Lütfen tekrar deneyiniz."
+
+end select
+
+ELSE
+print*,"Gectiniz."
+end if
+
+
+if(BUT <= 39) THEN
+print*, "Kaldınız."
+
+else if(BUT > 39) THEN
+print*, "Gectiniz."
+
+end if
+
+
+end program not
